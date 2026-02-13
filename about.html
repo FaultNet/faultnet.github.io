@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About FaultNet</title>
+  <script>
+  (function(){
+    try{
+      const k='faultnet_theme';
+      const s=localStorage.getItem(k);
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (s === 'dark' || (!s && prefersDark)) document.documentElement.classList.add('dark');
+    }catch(e){}
+  })();
+  </script>
+  <script>
+  (function(){
+    try{
+      document.documentElement.classList.add('page-hidden');
+      window.addEventListener('load', function(){
+        document.documentElement.classList.remove('page-hidden');
+        document.documentElement.classList.add('page-visible');
+      });
+    }catch(e){}
+  })();
+  </script>
+  <style>
+  :root{--hero-start:#8E60DC;--hero-end:#004d56;--hero-link:#004d56;--tagline:#dff6ff;--card-bg:#fff;--bg:#f4f6f8;--text:#333}
+
+  .dark{--bg:#0b0f14;--text:#e6eef6;--hero-start:#0b2330;--hero-end:#04282f;--tagline:#cfeefb;--card-bg:#071019}
+
+  body{font-family:'Roboto',system-ui,-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;margin:0}
+
+  .hero{background:linear-gradient(180deg,var(--hero-start) 0%,var(--hero-end) 100%);color:var(--hero-link);padding:55px 20px 85px 20px;display:block;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .hero .logo-wrapper{display:inline-block;position:relative;width:210px;margin-bottom:20px;border-radius:8px;overflow:visible}
+  .logo{width:100%;display:block;border-radius:8px;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.25))}
+  .tagline{font-size:1.2rem;color:var(--tagline);opacity:.95;margin:0}
+
+  .site-controls{display:flex;justify-content:flex-end;align-items:center;position:absolute;top:12px;right:5px;padding:0 5px}
+
+  .signup-section{max-width:400px;margin:-50px auto 60px auto;background:var(--card-bg);padding:40px 30px;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,0.08);position:relative;z-index:20}
+  .content{max-width:920px;margin:-50px auto 60px auto;padding:0 20px}
+  .content-card{background:var(--card-bg);padding:28px 30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06);text-align:left;color:var(--text);position:relative;z-index:20;margin-bottom:20px}
+  .content-card h2{font-size:1.35rem;margin:0 0 12px;line-height:1.2}
+  .content-card p, .content-card ul{font-size:1rem;line-height:1.7;margin-bottom:12px}
+  html.page-hidden{visibility:hidden;opacity:0}
+  html.page-visible{visibility:visible;opacity:1;transition:opacity .12s ease-in}
+
+  @media (max-width:500px){.site-controls{padding:0;right:0}.signup-section{margin:-50px 12px 60px 12px;max-width:calc(100% - 24px)}.content{margin:-50px 12px 60px 12px;max-width:calc(100% - 24px);padding:0 12px}}
+  </style>
+
+  <link rel="preload" href="/fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-700.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="preload" as="image" href="/images/logo.e7c5660c.webp">
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-controls">
+      <span class="icon-sun" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10-9h2V1h-2v3zm7.03 1.05l1.79-1.8-1.79-1.79-1.8 1.79 1.8 1.8zM17.24 19.16l1.8 1.79 1.79-1.79-1.79-1.8-1.8 1.8zM20 11v2h3v-2h-3zM12 6a6 6 0 100 12 6 6 0 000-12zM6.76 19.16l-1.8 1.79L3.17 19.16l1.79-1.8 1.8 1.8zM11 23h2v-3h-2v3z" fill="currentColor"/></svg>
+      </span>
+      <button id="themeToggleAbout" class="theme-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+        <span class="switch-knob" aria-hidden="true"></span>
+      </button>
+      <span class="icon-moon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor"/></svg>
+      </span>
+    </div>
+
+    <a class="hero" href="/">
+      <span class="logo-wrapper">
+        <picture>
+          <source srcset="/images/logo.e7c5660c.webp" type="image/webp">
+          <img src="/images/logo.e7c5660c.webp" alt="FaultNet Logo" class="logo" width="210" height="210" fetchpriority="high" decoding="async" onload="this.style.opacity='1'">
+        </picture>
+      </span>
+      <p class="tagline">Structured Intelligence for Real-World Automotive Faults</p>
+    </a>
+  </header>
+
+  <main class="content">
+
+    <section class="content-card">
+      <h2>The Problem</h2>
+      <p>
+        Modern vehicles are complex systems. When something fails whether it’s a fault code,
+        an electrical issue, a mechanical component or a single door that suddenly stops
+        locking, diagnosis may rely on scattered forum posts, anecdotal advice,
+        and repeated trial-and-error.
+      </p>
+      <p>
+        Valuable real-world experience exists but it is fragmented across thousands of
+        disconnected sources and rarely structured in a way that reveals meaningful patterns.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>The Vision</h2>
+      <p>
+        FaultNet aims to build a structured, searchable intelligence network of real-world
+        automotive faults that is based on realiable experience and data from both drivers and technicians.
+      </p>
+      <p>
+        By collecting and organizing fault cases across vehicles, environments, mileage,
+        symptoms, and repair outcomes, FaultNet seeks to surface patterns that are often
+        missed when problems are viewed in isolation.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>What FaultNet Covers</h2>
+      <ul>
+        <li>OBD and manufacturer-specific fault codes</li>
+        <li>Mechanical failures</li>
+        <li>Electrical faults</li>
+        <li>Intermittent or environment-triggered issues</li>
+        <li>Single-component failures (e.g., one door lock stops working)</li>
+        <li>Recurring model-specific weaknesses</li>
+      </ul>
+    </section>
+
+    <section class="content-card">
+      <h2>Why It Matters</h2>
+      <p>
+        Diagnosis becomes easier when patterns are visible.
+      </p>
+      <p>
+        Instead of relying solely on guesswork or isolated forum threads,
+        FaultNet aims to provide structured insights that help drivers and
+        technicians make more informed decisions.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>Open & Transparent Development</h2>
+      <p>
+        FaultNet is being built openly. The roadmap, discussions,
+        and development progress are available on GitHub.
+      </p>
+      <p>
+        <a href="https://github.com/FaultNet" target="_blank" rel="noopener noreferrer">
+          Visit FaultNet on GitHub →
+        </a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="currentYear">2026</span> FaultNet. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
