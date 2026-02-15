@@ -1,6 +1,26 @@
 const signupForm = document.getElementById('signupForm');
+function setCookie(name, value, days) {
+  let expires = '';
+  if (days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = '; expires=' + d.toUTCString();
+  }
+  document.cookie = name + '=' + (value || '') + expires + '; path=/';
+}
+function getCookie(name) {
+  const v = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+  return v ? v[1] : null;
+}
+function showSignedUp() {
+  const sec = document.querySelector('.signup-section');
+  if (!sec) return;
+  sec.innerHTML = '<h2>Join Early Access</h2>' +
+    '<p>Thanks! We\'ve received your sign-up and we\'ll be in touch as soon as the beta opens so you can get involved.</p>' +
+    '<p><a href="about.html">Learn more →</a></p>';
+}
 if (signupForm) {
-  signupForm.addEventListener('submit', function(e) {
+  signupForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const form = e.target;
     const action = form.action;
@@ -12,8 +32,8 @@ if (signupForm) {
       headers: { 'Accept': 'application/json' }
     }).then(response => {
       if (response.ok) {
-        alert('Thanks! Your signup was received.');
-        form.reset();
+        setCookie('signed-up', '1', 365);
+        showSignedUp();
       } else {
         alert('Sorry — there was a problem submitting the form.');
       }
@@ -22,6 +42,7 @@ if (signupForm) {
     });
   });
 }
+if (getCookie('signed-up')) showSignedUp();
 try {
   const yearEl = document.getElementById('currentYear');
   if (yearEl) {
