@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Removal | FaultNet</title>
+  <meta name="description" content="How to request data removal from FaultNet after closing your account.">
+  <script>
+  (function(){
+    try{
+      const k='faultnet_theme';
+      const s=localStorage.getItem(k);
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (s === 'dark' || (!s && prefersDark)) document.documentElement.classList.add('dark');
+    }catch(e){}
+  })();
+  </script>
+  <script>
+  (function(){
+    try{
+      document.documentElement.classList.add('page-hidden');
+      window.addEventListener('load', function(){
+        document.documentElement.classList.remove('page-hidden');
+        document.documentElement.classList.add('page-visible');
+      });
+    }catch(e){}
+  })();
+  </script>
+  <style>
+  :root{--hero-start:#8E60DC;--hero-end:#004d56;--hero-link:#004d56;--tagline:#dff6ff;--card-bg:#fff;--bg:#f4f6f8;--text:#333}
+  .dark{--bg:#0b0f14;--text:#e6eef6;--hero-start:#0b2330;--hero-end:#04282f;--tagline:#cfeefb;--card-bg:#071019}
+  body{font-family:'Roboto',system-ui,-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;margin:0}
+  .hero{background:linear-gradient(180deg,var(--hero-start) 0%,var(--hero-end) 100%);color:var(--hero-link);padding:55px 20px 85px 20px;display:block;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .hero .logo-wrapper{display:inline-block;position:relative;width:210px;margin-bottom:20px;border-radius:8px;overflow:visible}
+  .logo{width:100%;display:block;border-radius:8px;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.25))}
+  .tagline{font-size:1.2rem;color:var(--tagline);opacity:.95;margin:0}
+  .site-controls{display:flex;justify-content:flex-end;align-items:center;position:absolute;top:12px;right:5px;padding:0 5px}
+  .content{max-width:920px;margin:-50px auto 60px auto;padding:0 20px}
+  .content-card{background:var(--card-bg);padding:28px 30px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06);text-align:left;color:var(--text);position:relative;z-index:20;margin-bottom:20px}
+  .content-card h2{font-size:1.35rem;margin:0 0 12px;line-height:1.2}
+  .content-card p, .content-card ul{font-size:1rem;line-height:1.7;margin-bottom:12px}
+  html.page-hidden{visibility:hidden;opacity:0}
+  html.page-visible{visibility:visible;opacity:1;transition:opacity .12s ease-in}
+  @media (max-width:500px){.site-controls{padding:0;right:0}.content{margin:-50px 12px 60px 12px;max-width:calc(100% - 24px);padding:0 12px}}
+  </style>
+  <link rel="preload" href="/fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="/images/logo.e7c5660c.webp">
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-controls">
+      <span class="icon-sun" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10-9h2V1h-2v3zm7.03 1.05l1.79-1.8-1.79-1.79-1.8 1.79 1.8 1.8zM17.24 19.16l1.8 1.79 1.79-1.79-1.79-1.8-1.8 1.8zM20 11v2h3v-2h-3zM12 6a6 6 0 100 12 6 6 0 000-12zM6.76 19.16l-1.8 1.79L3.17 19.16l1.79-1.8 1.8 1.8zM11 23h2v-3h-2v3z" fill="currentColor"/></svg>
+      </span>
+      <button id="themeToggleData" class="theme-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+        <span class="switch-knob" aria-hidden="true"></span>
+      </button>
+      <span class="icon-moon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor"/></svg>
+      </span>
+    </div>
+    <a class="hero" href="/">
+      <span class="logo-wrapper">
+        <picture>
+          <source srcset="/images/logo.e7c5660c.webp" type="image/webp">
+          <img src="/images/logo.e7c5660c.webp" alt="FaultNet Logo" class="logo" width="210" height="210" fetchpriority="high" decoding="async" onload="this.style.opacity='1'">
+        </picture>
+      </span>
+      <p class="tagline">Data Removal</p>
+    </a>
+  </header>
+  <main class="content">
+    <section class="content-card">
+      <h2>How to Remove Your Data</h2>
+      <p>Last updated: February 28, 2026</p>
+      <p>If you have closed your FaultNet account and wish to have your personal data removed from our systems, please follow the steps below:</p>
+      <ul>
+        <li>After closing your account, contact our support team at <a href="mailto:support@faultnet.io">support@faultnet.io</a> to request data removal.</li>
+        <li>Include the email address associated with your account and specify your request for data deletion.</li>
+        <li>Our team will verify your request and confirm when your data has been removed.</li>
+      </ul>
+      <p>For your security, we may require additional information to verify your identity before processing your request.</p>
+      <h3>Why This Step Is Needed</h3>
+      <p>To protect your privacy and prevent unauthorized data removal, we require direct contact after account closure. This ensures only the rightful account owner can request deletion of their data.</p>
+      <h3>Contact Support</h3>
+      <p>If you have any questions or need assistance, please email <a href="mailto:support@faultnet.io">support@faultnet.io</a>.</p>
+      <p><a href="/">Back to Home →</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="currentYear">2026</span> FaultNet. All rights reserved.</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
